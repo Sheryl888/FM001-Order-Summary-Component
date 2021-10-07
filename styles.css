@@ -1,0 +1,180 @@
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: var(--pale-blue);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	/* height: 100%; I was trying to set a height of the parent to the .b__image, trying to get that wave to NOT flatten out. This didn't work.*/
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--desaturated-blue);
+}
+
+.bg__image {
+	background: url('./images/pattern-background-mobile.svg') no-repeat center/cover;
+	background-size: cover;
+	min-height: 50vh;
+
+	/* I DON'T KNOW HOW TO PROPERLY SET THE BG IMAGE, AS THE WAVE DESIGN FLATTENS OUT ON THE LEFT SIDE OF THE  "CONTAINER" IMAGE ONCE THE SCREEN WIDENS PAST 1075px */
+
+	height: 475px;
+
+	/*the height WAS set at 400, but the desktop image is 437px, the div was set at 400, is that why it was flattening out at a certain width?? THis didn't make any difference nor did trying to establish a 100% height for the body.*/
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+button {
+	font-family: inherit;
+}
+
+.btn {
+	border: none;
+	padding: 5px, 10px;
+	border-radius: 10px;
+	font-weight: bold;
+	/* font-size: 16px; */
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-change {
+	background-color: transparent;
+	color: var(--bright-blue);
+	text-decoration: underline;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.btn-primary {
+	background-color: var(--bright-blue);
+	color: white;
+	padding: 15px 40px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	width: 80%;
+}
+
+.btn-primary:hover {
+	opacity: 0.8;
+}
+
+.btn-change:hover {
+	opacity: 0.8;
+	text-decoration: none;
+}
+.btn-secondary {
+	background-color: transparent;
+	color: var(--desaturated-blue);
+	font-weight: bolder;
+}
+
+.btn-secondary:hover {
+	color: hsl(223, 47%, 23%);
+}
+
+.container {
+	background-color: white;
+	margin: 20px;
+	/* padding: 20px; Removed this, because I wanted the image to have no padding all around it*/
+	padding-bottom: 20px;
+	border-radius: 20px;
+	box-shadow: 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+}
+
+.container h1 {
+	color: hsl(223, 47%, 23%);
+	margin: 15px 0;
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.container p.subtitle {
+	padding: 0 30px;
+}
+
+.container img.hero {
+	width: 100%;
+	/* This is needed after taking out the padding for the image, which made it go all the way to the top, this makes it go all the way to the edges. */
+	border-radius: 20px 20px 0 0;
+}
+
+.container .price-plan {
+	margin: 30px auto;
+	padding: 10px;
+	background-color: var(--very-pale-blue);
+	width: 80%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container .price-plan article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .price-plan article img {
+	margin-right: 10px;
+}
+
+.container .buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+	/* 768px is for tablet size, but the container grew too big and wide when the screen got wider.*/
+	.bg__image {
+		background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+		height: 50vh;
+		/* the 50vh is veiw port heights, and the 50 will take up half the screen */
+	}
+
+	.container {
+		width: 375px;
+	}
+}
+/* The background image "wave" flattens out on the left side of the image as the screen widens past 1075px HOW CAN THIS BE FIXED?? */
