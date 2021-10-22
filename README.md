@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://sheryl888.github.io/FM001-Order-Summary-Component/)
+- Solution URL: [The solution URL is here](https://github.com/Sheryl888/FM001-Order-Summary-Component.git)
+- Live Site URL: [The live site URL is here](https://sheryl888.github.io/FM001-Order-Summary-Component/)
 
 
 ## My process
