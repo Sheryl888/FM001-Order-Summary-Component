@@ -25,6 +25,9 @@ Users should be able to:
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
+## UPLOAD ISSUE
+When publishing my code here on Github, when it was live, the images in the project disappeared. I will check back after a bit to see if it takes some more time for them to render and go love. This is initially very disappointing. :(
+
 ## My process
 I needed a hand to hold to even start this. AS I am brand new to coding. I found a tutorial on YouTube to follow and start me off (hopefully) right. I have the link and the creator listed below under What I Learned.
 
